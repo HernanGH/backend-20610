@@ -1,0 +1,24 @@
+{
+  "name": "clases",
+  "version": "1.0.0",
+  "description": "#### Podes ver la practica de cada clase cambiando de rama como se puede ver en la siguiente imagen",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HernanGH/backend-20610.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HernanGH/backend-20610/issues"
+  },
+  "homepage": "https://github.com/HernanGH/backend-20610#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}
