@@ -1,19 +1,25 @@
 const escribirArchivo = (mensaje, callback) => {
-  console.log('Escribiendo en el archivo...', mensaje);
+  /** ⏰ 3 */ console.log('⏰ 3 Escribiendo en el archivo...', mensaje);
 
   // simulamos la escritura en archivo con setTimeout
-  setTimeout(() => {
-    console.log('Se termino de escribir en el archivo');
+
+  /** ⏰  4 */ setTimeout(() => {
+
+    /** ⛔​ 1 */ console.log('⛔ Se termino de escribir en el archivo');
     // termino de escribir ejecutamos la funcion callback que nos enviaron
-    callback();
+
+    /** ⛔​ 2 */ callback();
+
   }, 2500);
 };
 
 
-console.log('inicio del programa');
+/** ⏰ 1 */ console.log('⏰ 1 inicio del programa');
 
-escribirArchivo('hola mundo', () => {
-  console.log('termino de escribir el archivo');
+/** ⏰ 2 */ escribirArchivo('hola mundo', () => {
+  
+  /** ⛔​ 3 */ console.log('⛔ termino de escribir el archivo');
+
 });
 
-console.log('fin del programa');
+/** ⏰ 5 */ console.log('⏰ 5 fin del programa');
