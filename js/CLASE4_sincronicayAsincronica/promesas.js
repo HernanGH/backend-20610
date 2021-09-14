@@ -13,7 +13,7 @@ function dividir(dividendo, divisor) {
   })
 }
  
-dividir(10, 0)
+dividir(10, 2)
   .then(resultado => {
     console.log(`resultado: ${resultado}`)
   })
@@ -39,19 +39,19 @@ dividir(10, 0 , (error, resultado) => {
   } else {
     console.log(`resultado: ${resultado}`);
   }
-});
-*/
-// PROMESAS ANIDADAS
-// const value = 20;
+});*/
 
-// Promise.resolve(value)
-//   .then(value => value + 1)
-//   .then(value => value * 2)
-//   .then(value => {
-//     if (value === 22) throw 'Error'
-//     else return 80;
-//   })
-//   .then(value => 30)
-//   .then( x => x / 2 )
-//   .then( console.log )
-//   .catch( console.log );
+// PROMESAS ANIDADAS
+const value = 10;
+
+Promise.reject(30)
+  .then(value => value + 1) // 21 // 11
+  .then(value => value * 2) // 42  // 22
+  .then(value => {
+    if (value === 22) throw 'Error 22' // 10 -> error  // throw === reject
+    else return 80; // por aca
+  })
+  .then(value => 30) // 30
+  .then( x => x / 2 ) // 15
+  .then((res) => console.log(res) )
+  .catch( console.log );

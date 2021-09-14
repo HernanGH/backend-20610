@@ -1,9 +1,9 @@
 // CALLBACK //
 // const ejecutar = (unaFuncion) => unaFuncion();
 
-// const saludar = () => console.log('HOLA');
+// const saludar = () => console.log('HOLA 2');
 
-// ejecutar(saludar);
+// ejecutar(() => console.log('HOLA 3'));
 
 // ENVIO LA FUNCION DIRECTO
 // const ejecutar = (unaFuncion) => unaFuncion();
@@ -17,8 +17,8 @@
 // const ejecutar = (parametros, unaFuncion) => unaFuncion(parametros);
 
 // const saludar = (nombre) => console.log(`Hola ${nombre}`);
-
-// ejecutar('coder', saludar);
+// // saludar('Hernan');
+// ejecutar('Hernan', saludar);
 
 // EJEMPLO //
 
@@ -29,9 +29,14 @@
 //   callbackParaLoguear('archivo escrito con éxito');
 //  }
  
+//  const callback = (mensajeParaLoguear) => {
+//   const fecha = new Date().toLocaleDateString()
+//   console.log(`${fecha}: ${mensajeParaLoguear}`)
+//  };
+
+//  escribirYLoguear('hola mundo de los callbacks!', callback)
+// ===
 //  escribirYLoguear('hola mundo de los callbacks!', (mensajeParaLoguear) => {
 //   const fecha = new Date().toLocaleDateString()
 //   console.log(`${fecha}: ${mensajeParaLoguear}`)
-//  })
-
- 
+// });
