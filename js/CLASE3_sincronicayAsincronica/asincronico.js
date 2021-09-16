@@ -10,7 +10,7 @@ const escribirArchivo = (mensaje, callback) => {
 
     /** ⛔​ 2 */ callback();
 
-  }, 2500);
+  }, 3000);
 };
 
 

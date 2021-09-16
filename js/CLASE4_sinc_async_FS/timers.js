@@ -25,14 +25,14 @@
 //   console.log('ESTE MENSAJE SE VA A MOSTRAR DESPUES DE 4 SEGUNDOS MUCHAS VECES');
 // }, 4000);
 
-// const interval = setInterval(() => {
-//   console.log('ESTE MENSAJE SE VA A MOSTRAR DESPUES DE 1 SEGUNDOS MUCHAS VECES');
-// }, 1000);
+const interval = setInterval(() => {
+  console.log('ESTE MENSAJE SE VA A MOSTRAR DESPUES DE 1 SEGUNDOS MUCHAS VECES');
+}, 1000);
 
-// console.log(interval);
+console.log(interval);
 
-// setTimeout(() => {
-//   clearInterval(interval);
-// }, 4000);
+setTimeout(() => {
+  clearInterval(interval);
+}, 5000);
 
 // RESOLUCION DE PRACTICA DE TIMERS
