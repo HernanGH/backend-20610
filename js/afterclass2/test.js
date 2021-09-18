@@ -1,3 +1,21 @@
 const Contenedor = require('./Contenedor');
 
-const miContenedor = new Contenedor('./productos.json');
+const contenedor = new Contenedor('mascotas.json');
+
+const miMascota = {
+  name: 'terry',
+  age: 5
+};
+
+const main = async () => {
+  // const id = await contenedor.save(miMascota);
+  
+  // console.log(id);
+
+  // const list = await contenedor.getAll();
+  // console.log(list);
+
+  // await contenedor.deleteAll();
+};
+
+main();
