@@ -4,12 +4,15 @@
   "description": "nada",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "minmaxaverage": "^1.0.1",
+    "express": "^4.17.1",
+    "minmaxaverage": "1.0.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {

@@ -11,5 +11,10 @@ const moment = require('moment');
 
 // console.log(max)
 
-const today = moment();
-console.log(today);
+
+setInterval(() => {
+  const today = moment();
+  console.log('TODAY: ', today);
+  console.log('YESTERDAY: ', today);
+  console.log('genial se actualiza solo: ', today);
+}, 2000);
