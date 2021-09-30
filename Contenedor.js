@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 class Contenedor {
+  // file es la ruta del archivo con respecto a este archivo
   constructor(file) {
     this.file = file;
   }

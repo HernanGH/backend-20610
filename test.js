@@ -1,7 +1,7 @@
 const Contenedor = require('./Contenedor');
 
-const contedor = new Contenedor('./productos.json');
+const contedor = new Contenedor('./data/personas.json');
 
 contedor.save({
-  name: 'producto prueba 3'
+  name: 'house'
 });
