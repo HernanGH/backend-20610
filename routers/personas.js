@@ -31,6 +31,24 @@ personasRouter.post('/', async (req, res) => {
   });
 })
 
+personasRouter.put('/:id', async (req, res) => {
+  const personaId = req.params.id;
+  const persona = req.body;
+  const userUpdated = await personasContenedor.update(personaId, persona);
+
+  if (!userUpdated) {
+    res.send({
+      message: 'operation wrongt',
+      data: userUpdated
+    });
+  } else {
+    res.send({
+      message: 'operation successfull',
+      data: userUpdated
+    });
+  }
+});
+
 module.exports = personasRouter;
 
 console.log(__dirname);

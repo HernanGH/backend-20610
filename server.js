@@ -14,6 +14,7 @@ const PORT = 8080;
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
+// agregamos servidor estatico para la carpeta public
 server.use('/static', express.static('public'));
 
 server.use(function (req, res, next) {

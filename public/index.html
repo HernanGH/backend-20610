@@ -7,9 +7,12 @@
   <title>WEB</title>
 </head>
 <body>
-  <h1>Archivo con express estatico</h1>
-  <script>
-    alert('Desde express');
-  </script>
+  <h1>Formulario de personas</h1>
+  <form method="POST" action="/api/personas">
+    <input placeholder="name" name="name"/>
+    <input placeholder="lastName" name="lastName"/>
+    <input placeholder="age" name="age" type="number"/>
+    <input value="Aceptar" type="submit"/>
+  </form>
 </body>
 </html>

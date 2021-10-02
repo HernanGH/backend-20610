@@ -1,8 +1,8 @@
 [
   {
-    "name": "coder",
+    "name": "coder1",
     "lastName": "coder",
-    "age": 10,
+    "age": 200,
     "id": 1
   },
   {
@@ -16,5 +16,11 @@
     "lastName": "coderhouse",
     "age": 20,
     "id": 3
+  },
+  {
+    "name": "asd",
+    "lastName": "asd",
+    "age": "5",
+    "id": 4
   }
 ]
