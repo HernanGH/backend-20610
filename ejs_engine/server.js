@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.use('/static', express.static('public'));
+// app.use('/static', express.static('public'));
 
 app.set('view engine', 'ejs');
 
@@ -10,10 +10,15 @@ app.get('/', (req, res) => {
     { name: 'Sammy' },
     { name: 'Tux' },
     { name: 'Moby Dock' },
+    { name: 'Pug' },
+    { name: 'Firulaus' }
   ];
   const tagline = 'Mascots';
 
-  res.render('pages/index', { mascots: mascots, tagline: tagline });
+  res.render('pages/index', {
+    mascots,
+    tagline
+  });
 });
 
 app.get('/about', (req, res) => {
