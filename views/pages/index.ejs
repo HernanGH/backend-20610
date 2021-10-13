@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+  <main>
+
+    <div class="jumbotron p-2 text-center">
+      <h2>Bienvenido a mi trabajo realizado con EJS</h2>
+      <ul class="container list-group">   
+          <li class="list-group-item list-group-item-dark"><b>* HERRAMIENTAS DE LA PÁGINA *</b></li>
+          <li class="list-group-item list-group-item-light"> Formulario en la pestaña <a href="/form" class="btn btn-dark"><b>Añadir</b></a></li>
+          <li class="list-group-item list-group-item-dark"> Listado de productos en la pestaña <a href="/lista-productos" class="btn btn-dark"><b>Productos</b></a></li>
+        </ul>
+      <hr class="border border-dark m-5">    
+      <div class="row">
+        <div class="col-6 d-flex align-items-center  justify-content-center">
+          <div class="card btn-outline-dark" style="width: 18rem;">
+            <img class="card-img-top" src="https://www.coppel.com/images/catalog/pr/3417092-1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Mochila</h5>
+              <p class="card-text">Aquí puedes acceder al formulario.</p>
+              <a href="../form" class="btn btn-dark">Ver<br> formulario</a>
+            </div>
+          </div>
+        </div>
+          <div class="col-6 d-flex align-items-center  justify-content-center">
+            <div class="card btn-outline-dark" style="width: 18rem;">
+              <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_736723-MLA46459157418_062021-V.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Cartuchera</h5>
+                <p class="card-text">Aquí puedes acceder al listado.</p>
+                <a href="../lista-productos" class="btn btn-dark">Ver<br> listado</a>
+              </div>
+            </div>
+          </div>
+        </div>              
+    </div>
+    <hr class="border border-dark m-5">
+  </main>
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+</body>
+</html>

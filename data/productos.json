@@ -1,0 +1,38 @@
+[
+  {
+    "articulo": "Cartuchera",
+    "precio": "824.99",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_788665-MLA47388123931_092021-V.jpg",
+    "id": 1
+  },
+  {
+    "articulo": "Pincel",
+    "precio": "300.00",
+    "imagen": "http://www.distribuidoranderson.com/1280-thickbox_default/pincel-negro-de-cerda-n24.jpg",
+    "id": 2
+  },
+  {
+    "articulo": "Microfibra",
+    "precio": "230.00",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_854362-MLA31016482939_062019-O.jpg",
+    "id": 3
+  },
+  {
+    "articulo": "Lapicera",
+    "precio": "180.00",
+    "imagen": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/370/399/products/lapicera-bic-cristal-negro-fino1-5d2e9b7cd744db662f16102041082686-640-0.jpg",
+    "id": 4
+  },
+  {
+    "articulo": "Marcador",
+    "precio": "250.00",
+    "imagen": "https://inkgenio.com.ar/4512-large_default/marcador-filgo-permanente-060-negro-bisel.jpg",
+    "id": 5
+  },
+  {
+    "articulo": "Lápiz",
+    "precio": "55.55",
+    "imagen": "https://masdemucho.com.ar/wp-content/uploads/2021/02/f72ae94c-f66f-49c1-a4bb-a6a1212c767d-3.jpg",
+    "id": 6
+  }
+]
