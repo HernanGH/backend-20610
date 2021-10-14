@@ -24,13 +24,14 @@ productosRouter.post('/form', async (req, res) => {
 
   const idProductoGuardado = await productosContenedor.save(nuevoProducto);
 
-  res.send({
-    message: 'Producto guardado',
-    data: {
-      ...nuevoProducto,
-      id: idProductoGuardado
-    }
+    res.redirect('/lista-productos')
 
+    res.send({
+      message: 'Producto guardado',
+      data: {
+        ...nuevoProducto,
+        id: idProductoGuardado
+      }
   });
 
 })

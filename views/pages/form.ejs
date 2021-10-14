@@ -8,18 +8,20 @@
       <%- include('../partials/header2'); %>
     </header>
     <main>
-      <div class="jumbotron p-5 text-center">
-        <h1>Ingrese el producto</h1>
-        <form action="form" method="post">
-          <label name="articulo">Nombre</label><br>
-          <input class="text-center" placeholder="Ingresar artículo"  name="articulo"/><br>
-          <label name="precio">Precio</label><br>
-          <input class="text-center" placeholder="Ingresar precio" name="precio" type="number" step="any"/><br>
-          <label name="imagen">Foto URL</label><br>
-          <input class="text-center p-3" placeholder="Ingresar URL"name="imagen"/><br><br>
-          <input class="p-3 btn-white btn-outline-dark value="Enviar" type="submit"/>
-          <hr>
-        </form>
+      <div class="col jumbotron m-5 border border-dark">
+        <div class="col jumbotron p-5 text-center m-5 border border-dark">
+          <h1>Ingrese el producto</h1>
+          <form action="form" method="post">
+            <label name="articulo">Nombre</label><br>
+            <input class="text-center" placeholder="Ingresar artículo"  name="articulo"/><br>
+            <label name="precio">Precio</label><br>
+            <input class="text-center" placeholder="Ingresar precio" name="precio" type="number" step="any"/><br>
+            <label name="imagen">Foto URL</label><br>
+            <input class="text-center p-3" placeholder="Ingresar URL"name="imagen"/><br><br>
+            <input class="p-3 btn-white btn-outline-dark value="Enviar" type="submit"/>
+            <hr>
+          </form>
+        </div>
       </div>
     </main>
     <footer>

@@ -11,6 +11,7 @@ class Contenedor {
   
       let productos = [];
       if (contenido === '') {
+        console.log('anda')
         producto.id = 1;
         productos.push(producto);
       } else {
