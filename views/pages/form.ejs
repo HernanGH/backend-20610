@@ -11,7 +11,7 @@
       <div class="col jumbotron m-5 border border-dark">
         <div class="col jumbotron p-5 text-center m-5 border border-dark">
           <h1>Ingrese el producto</h1>
-          <form action="form" method="post">
+          <form id="form">
             <label name="articulo">Nombre</label><br>
             <input class="text-center" placeholder="Ingresar artículo"  name="articulo"/><br>
             <label name="precio">Precio</label><br>
@@ -23,6 +23,7 @@
           </form>
         </div>
       </div>
+      <div id="real-time-products"></div>
     </main>
     <footer>
       <%- include('../partials/footer'); %>

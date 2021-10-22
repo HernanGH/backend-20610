@@ -36,7 +36,7 @@ productosRouter.post('/form', async (req, res) => {
 
 })
 
-productosRouter.get('/:id', async (req, res) => {
+productosRouter.get('/api/products/:id', async (req, res) => {
   const productoId = req.params.id;
   const producto = req.body;
   const productoGet = await productosContenedor.getById(productoId, producto);
@@ -53,7 +53,7 @@ productosRouter.get('/:id', async (req, res) => {
     });
   }
 });
-productosRouter.put('/:id', async (req, res) => {
+productosRouter.put('/api/products/:id', async (req, res) => {
   const productoId = req.params.id;
   const producto = req.body;
   const productoUpdated = await productosContenedor.update(productoId, producto);
@@ -71,7 +71,7 @@ productosRouter.put('/:id', async (req, res) => {
   }
 });
 
-productosRouter.delete('/:id', async (req, res) => {
+productosRouter.delete('/api/products/:id', async (req, res) => {
   const productoId = req.params.id;
   const producto = req.body;
   const productoDelete = await productosContenedor.deleteById(productoId, producto);
