@@ -13,11 +13,13 @@ class Contenedor {
       if (contenido === '') {
         console.log('anda')
         producto.id = 1;
+        producto.timestamp = Date.now();
         productos.push(producto);
       } else {
         const listaDeProducto = JSON.parse(contenido);
     
         producto.id = listaDeProducto[listaDeProducto.length - 1].id + 1;
+        producto.timestamp = Date.now();
         listaDeProducto.push(producto);
         productos = listaDeProducto;
       }
@@ -36,7 +38,8 @@ class Contenedor {
         const listaDeProducto = JSON.parse(contenido);
         if (listaDeProducto === '') {
           return null;
-        } else { const elementoEncontrado = listaDeProducto.filter(elemento => elemento.id == id);
+        } else {
+          const elementoEncontrado = listaDeProducto.find(elemento => elemento.id === parseInt(id));
           return elementoEncontrado;
         }
     }catch (error) {
@@ -61,9 +64,10 @@ class Contenedor {
       const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
       const listaDeProducto = JSON.parse(contenido);
       if (listaDeProducto === '') {
-      } else { const elementoEncontrado = listaDeProducto.filter(elemento => elemento.id !== id);
-        const productosString = JSON.stringify(elementoEncontrado, null, 2);
-        await fs.promises.writeFile(`./${this.file}`, JSON.stringify(productosString));
+      } else {
+        const listaActualizada = listaDeProducto.filter(elemento => elemento.id === id);
+        const listString = JSON.stringify(listaActualizada, null, 2);
+        await fs.promises.writeFile(`./${this.file}`, listString);
       }
     }catch (error) {
       console.error('Error:', error);
@@ -79,10 +83,12 @@ class Contenedor {
   }
   async update(id, element) {
     const list = await this.getAll();
+    console.log({list})
+    console.log({id})
 
     const elementSaved = list.find((item) => item.id === parseInt(id));
     const indexElementSaved = list.findIndex((item) => item.id === parseInt(id));
-
+    console.log({elementSaved})
     if (!elementSaved) {
       console.error(`Elemento con el id: '${id}' no fue encontrado`);
       return null;
