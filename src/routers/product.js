@@ -1,4 +1,5 @@
 const express = require('express');
+const isAdmin = require('../middlewares/isAdmin');
 const { getAllProducts, createProduct } = require('../models/product');
 
 const productRouter = express.Router();
@@ -8,7 +9,8 @@ productRouter.get('/', async (req, res) => {
   res.send({ data });
 });
 
-productRouter.post('/', async (req, res) => {
+// isAdmin  es un middleware local 
+productRouter.post('/', isAdmin, async (req, res) => {
   const nuevoProducto = req.body;
 
   const idProductsaved = await createProduct(nuevoProducto);
