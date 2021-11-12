@@ -1,4 +1,4 @@
-mongo ecommerce // mongo    use ecommerce
+```mongo ecommerce // mongo    use ecommerce
 
 db.createCollection('messages')
 
@@ -33,6 +33,7 @@ db.products.find().pretty()
 db.messages.count()
 
 db.products.count()
+```
 
 // create
 db.products.insertOne({
