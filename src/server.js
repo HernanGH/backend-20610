@@ -1,5 +1,7 @@
+require('dotenv').config();
 const { Server: HttpServer } = require('http')
 const { Server: SocketServer } = require('socket.io')
+
 const express = require('express');
 
 const cartRouter = require('./routers/cart');
