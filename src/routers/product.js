@@ -2,9 +2,9 @@ const express = require('express');
 // const ProductDaoMongo = require('../daos/products/ProductDaoMongo');
 
 // importo el dao que exporte en el /daos/index.js
-const { productDao } = require('../daos')
+const { ProductDao } = require('../daos');
 const isAdmin = require('../middlewares/isAdmin');
-const { getAllProducts, createProduct, getProduct } = require('../models/product');
+// const { getAllProducts, createProduct, getProduct } = require('../models/product');
 
 const productRouter = express.Router();
 

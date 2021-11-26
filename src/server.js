@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Server: HttpServer } = require('http')
 const { Server: SocketServer } = require('socket.io')
-
+const faker = require('faker');
 const express = require('express');
 
 const cartRouter = require('./routers/cart');
@@ -39,6 +39,22 @@ app.get('/', (req,res) => res.send({ data: Date.now() }))
 
 app.use('/api/productos', productRouter);
 app.use('/api/carrito', cartRouter);
+
+app.get('/api/products-test', (req, res) => {
+  // spreap new array: [...new Array(5)].map
+  // 
+  // for (let index = 0; index < 5; index++) {
+  //   const element = array[index];
+  // }
+
+  const products = [...new Array(5)].map((_, index) => ({
+    id: index,
+    title: faker.commerce.product(),
+    price: faker.commerce.price(),
+    thumbnail: faker.image.imageUrl()
+  }));
+  res.json(products);
+})
 
 httpServer.listen(8081, () => 
   console.log(`Servidor abierto en http://localhost:${8081}/`)
