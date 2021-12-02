@@ -3,8 +3,8 @@ const cookieParser = require('cookie-parser')
 
 const app = express()
 
-app.use(cookieParser())
-// app.use(cookieParser('my-secret'))
+// app.use(cookieParser())
+app.use(cookieParser('my-secret'))
 // app.use(cookieParser(['my-secret', 'another-secret']))
 
 app.use((req, res, next) => {

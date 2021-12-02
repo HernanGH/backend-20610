@@ -24,11 +24,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/olvidar', (req, res) => {
+  const name = getNombreSession(req);
   req.session.destroy(err => {
     if (err) {
       res.json({ error: 'olvidar', body: err })
     } else {
-      res.send(`Hasta luego ${getNombreSession(req)}`)
+      res.send(`Hasta luego ${name}`)
     }
   })
 })
