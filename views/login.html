@@ -15,10 +15,12 @@
         <div class="jumbotron">
             <h1>Login de Usuario</h1>
             <br>
-            <div class="form-group">
-                <input class="btn btn-primary my-3" type="submit" value="Login con Facebook"
-                    onclick="location.href = '/auth/facebook'">
-            </div>
+            <form action="/auth/local" method="post">
+                <input name="username" placeholder="Email" class="" type="text" value="" >
+                <input name="password" placeholder="Contraseña" class="" type="text" value="" >
+                <input class="btn btn-primary my-3" type="submit" value="Login">
+            </form>
+            <button class="btn btn-primary my-3">Ir a Registro</button>
         </div>
     </div>
 </body>

@@ -11,10 +11,8 @@ productosWebRouter.get('/', (req, res) => {
 
 productosWebRouter.get('/home', webAuth, (req, res) => {
     res.render(path.join(process.cwd(), '/views/pages/home.ejs'), {
-        nombre: req.user.displayName,
-        foto: req.user.photos[0].value,
-        email: req.user.emails[0].value,
-        contador: req.user.contador
+        nombre: req.user.username,
+        email: req.user.email
     })
 })
 

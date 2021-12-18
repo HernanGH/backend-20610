@@ -14,6 +14,7 @@ import productosApiRouter from './routers/api/productos.js'
 
 import addProductosHandlers from './routers/ws/productos.js'
 import addMensajesHandlers from './routers/ws/mensajes.js'
+import mongoose from 'mongoose'
 
 //--------------------------------------------
 // instancio servidor, socket y api
@@ -67,8 +68,13 @@ app.use(homeWebRouter)
 
 //--------------------------------------------
 // inicio el servidor
+mongoose.connect(config.mongoLocal.cnxStr, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
+    if(err) {
+      console.error('Erro connection mongo');
+    }
 
-const connectedServer = httpServer.listen(config.PORT, () => {
-    console.log(`Servidor http escuchando en el puerto ${connectedServer.address().port}`)
+    const connectedServer = httpServer.listen(config.PORT, () => {
+        console.log(`Servidor http escuchando en el puerto ${connectedServer.address().port}`)
+    })
+    connectedServer.on('error', error => console.log(`Error en servidor ${error}`))
 })
-connectedServer.on('error', error => console.log(`Error en servidor ${error}`))
