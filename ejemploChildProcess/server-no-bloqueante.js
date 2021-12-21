@@ -10,7 +10,11 @@ server.on('request', (req,res) => {
     if(url == '/calculo-nobloq') {
         //const sum = calculo()
         const computo = fork('./computo.js')
+        // const computo1 = fork('./computo.js')
+        // const computo2 = fork('./computo.js')
         computo.send('start')
+        // computo1.send('start')
+        // computo2.send('start')
         computo.on('message', sum => {
             res.end(`La suma es ${sum}`)
         })
