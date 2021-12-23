@@ -15,6 +15,7 @@ import productosApiRouter from './routers/api/productos.js'
 import addProductosHandlers from './routers/ws/productos.js'
 import addMensajesHandlers from './routers/ws/mensajes.js'
 import mongoose from 'mongoose'
+import randomsApiRouter from './routers/api/randoms.js'
 
 //--------------------------------------------
 // instancio servidor, socket y api
@@ -59,6 +60,7 @@ app.use(passport.session());
 // rutas del servidor API REST
 
 app.use(productosApiRouter)
+app.use(randomsApiRouter)
 
 //--------------------------------------------
 // rutas del servidor web
