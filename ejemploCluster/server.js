@@ -30,9 +30,13 @@ if(cluster.isMaster && isCluster) {
 /* WORKERS */
 else {
     //console.log(parseInt(process.argv[2]))
-    const PORT = parseInt(process.argv[2]) || 8080
+    const PORT = parseInt(process.argv[2]) || 8081
 
     app.get('/', (req,res) => {
+        res.send(`Servidor express en ${PORT} - <b>PID ${process.pid}</b> - ${new Date().toLocaleString()}`)
+    })
+
+    app.get('/api/randoms', (req,res) => {
         res.send(`Servidor express en ${PORT} - <b>PID ${process.pid}</b> - ${new Date().toLocaleString()}`)
     })
 
