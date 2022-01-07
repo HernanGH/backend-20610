@@ -67,3 +67,16 @@ pm2 list // 8 process
 
 ps -xa // 8 process
 ```
+
+## 5 NGINX
+
+```
+npm start 8082
+npm start 8083
+npm start 8084
+npm start 8085
+
+nginx -t 
+nginx -s reload
+```
+
