@@ -9,7 +9,7 @@ const app = express()
 const numCPUs = require('os').cpus().length
 
 
-const isCluster = process.argv[2] === 'CLUSTER' ;
+const isCluster = process.argv[2] === 'CLUSTER';
 
 /* --------------------------------------------------------------------------- */
 /* MASTER */
