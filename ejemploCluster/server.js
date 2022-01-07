@@ -8,9 +8,12 @@ const app = express()
 
 const numCPUs = require('os').cpus().length
 
+
+const isCluster = process.argv[2] === 'CLUSTER' ;
+
 /* --------------------------------------------------------------------------- */
 /* MASTER */
-if(cluster.isMaster) {
+if(cluster.isMaster && isCluster) {
     console.log(`Cantidad de procesadores: ${numCPUs}`)
     console.log(`PID MASTER ${process.pid}`)
 
@@ -31,6 +34,15 @@ else {
 
     app.get('/', (req,res) => {
         res.send(`Servidor express en ${PORT} - <b>PID ${process.pid}</b> - ${new Date().toLocaleString()}`)
+    })
+
+    app.get('/info', (req,res) => {
+        res.send(`
+            <br>Servidor express en ${PORT} -<br>
+            <b>PID ${process.pid}</b><br>
+            -${new Date().toLocaleString()}<br>
+            Cantidad de procesadores: ${numCPUs}
+            `)
     })
 
     app.listen(PORT, err => {
