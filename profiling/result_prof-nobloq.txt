@@ -1,0 +1,407 @@
+Statistical profiling result from nobloq-v8.log, (197 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      5    2.5%          /usr/lib/system/libsystem_pthread.dylib
+      5    2.5%          /usr/lib/libc++.1.dylib
+      4    2.0%          /usr/lib/system/libsystem_platform.dylib
+      3    1.5%          /usr/lib/system/libsystem_c.dylib
+      2    1.0%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.5%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.5%          /usr/lib/libobjc.A.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+     52   26.4%   29.5%  t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+     45   22.8%   25.6%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     15    7.6%    8.5%  T __kernelrpc_mach_port_get_refs
+     14    7.1%    8.0%  T _mach_port_allocate
+     10    5.1%    5.7%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      6    3.0%    3.4%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      5    2.5%    2.8%  T ___getrlimit
+      4    2.0%    2.3%  T _posix_spawn_file_actions_adddup2
+      4    2.0%    2.3%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    1.5%    1.7%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      2    1.0%    1.1%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    1.0%    1.1%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    1.0%    1.1%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.5%    0.6%  t __pthread_mutex_global_init
+      1    0.5%    0.6%  t __ZThn8_NK4node22PerIsolatePlatformData30NonNestableDelayedTasksEnabledEv
+      1    0.5%    0.6%  t __ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+      1    0.5%    0.6%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.5%    0.6%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.5%    0.6%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.5%    0.6%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+      1    0.5%    0.6%  T _task_restartable_ranges_synchronize
+      1    0.5%    0.6%  T _proc_set_dirty
+      1    0.5%    0.6%  T _getxattr
+      1    0.5%    0.6%  T __ZN4node11Environment14CheckImmediateEP10uv_check_s
+      1    0.5%    0.6%  T __ZN2v88internal11VariableMap7DeclareEPNS0_4ZoneEPNS0_5ScopeEPKNS0_12AstRawStringENS0_12VariableModeENS0_12VariableKindENS0_18InitializationFlagENS0_17MaybeAssignedFlagENS0_12IsStaticFlagEPb
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    0.0%  JavaScript
+    176   89.3%  100.0%  C++
+     37   18.8%   21.0%  GC
+     21   10.7%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     75   56.4%   38.1%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     57   42.9%   28.9%  t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.8%    0.5%  T __ZN2v88internal40Builtin_CallSitePrototypeGetFunctionNameEiPmPNS0_7IsolateE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     52   26.4%  t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+     28   53.8%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      4   14.3%      t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1   25.0%        LazyCompile: ~toIdentifier /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/toidentifier/index.js:24:23
+      1  100.0%          LazyCompile: ~forEachCode /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/http-errors/index.js:265:38
+      1  100.0%            t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1   25.0%        LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1   25.0%        LazyCompile: ~pathtoRegexp /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          LazyCompile: ~Layer /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            LazyCompile: ~use /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/router/index.js:434:25
+      1   25.0%        LazyCompile: ~isFileType fs.js:198:20
+      1  100.0%          LazyCompile: ~realpathSync fs.js:1722:22
+      1  100.0%            LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      3   10.7%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1119:39
+      3  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      3  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      2    7.1%      LazyCompile: ~realpathSync fs.js:1722:22
+      2  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      2  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      2  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1    3.6%      LazyCompile: ~setupListenHandle net.js:1284:27
+      1  100.0%        LazyCompile: ~listenInCluster net.js:1369:25
+      1  100.0%          LazyCompile: ~Server.listen net.js:1411:35
+      1  100.0%            LazyCompile: ~listen /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/application.js:616:29
+      1    3.6%      LazyCompile: ~resolve path.js:1067:10
+      1  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    3.6%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1    3.6%      LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    3.6%      LazyCompile: ~depd /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/depd/index.js:105:15
+      1  100.0%        Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    3.6%      LazyCompile: ~_addListener events.js:428:22
+      1  100.0%        LazyCompile: ~addListener events.js:496:58
+      1  100.0%          LazyCompile: ~getStdout internal/bootstrap/switches/is_main_thread.js:120:19
+      1  100.0%            LazyCompile: ~get internal/console/constructor.js:206:14
+      1    3.6%      LazyCompile: ~Socket net.js:281:16
+      1  100.0%        LazyCompile: ~WriteStream tty.js:85:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream internal/bootstrap/switches/is_main_thread.js:41:35
+      1  100.0%            LazyCompile: ~getStderr internal/bootstrap/switches/is_main_thread.js:132:19
+      1    3.6%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    3.6%      LazyCompile: ~Module internal/modules/cjs/loader.js:163:16
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    3.6%      LazyCompile: ~Mime.define /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/mime/mime.js:21:34
+      1  100.0%        Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/mime/mime.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    3.6%      Eval: ~<anonymous> net.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> tty.js:1:1
+      1    3.6%      Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> events.js:1:1
+      1    3.6%      Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    3.6%      Eval: ~<anonymous> internal/console/constructor.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/console/global.js:1:1
+      1    3.6%      Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    3.6%      Eval: ~<anonymous> crypto.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1  100.0%            LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      1    3.6%      Eval: ~<anonymous> _http_server.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> http.js:1:1
+      1    3.6%      Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/iconv-lite/lib/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    3.6%      Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/response.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      3    5.8%    LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      3  100.0%      LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      3  100.0%        LazyCompile: ~require internal/modules/cjs/helpers.js:92:31
+      1   33.3%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/qs/lib/parse.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1   33.3%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/qs/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1   33.3%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/iconv-lite/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    1.9%    T __ZN2v88internal40Builtin_CallSitePrototypeGetFunctionNameEiPmPNS0_7IsolateE
+      1  100.0%      LazyCompile: ~prepareStackTrace internal/errors.js:81:27
+      1  100.0%        T __ZN2v88internal9Accessors16ErrorStackGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      1  100.0%          LazyCompile: ~getStack /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/depd/index.js:365:19
+      1  100.0%            LazyCompile: ~wrapfunction /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/depd/index.js:397:23
+      1    1.9%    LazyCompile: ~syncExports internal/bootstrap/loaders.js:261:14
+      1  100.0%      LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1  100.0%        LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    1.9%    LazyCompile: ~stringToFlags internal/fs/utils.js:538:23
+      1  100.0%      LazyCompile: ~openSync fs.js:488:18
+      1  100.0%        LazyCompile: ~readFileSync fs.js:390:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.9%    LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1  100.0%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    1.9%    LazyCompile: ~resolve path.js:1067:10
+      1  100.0%      LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.9%    LazyCompile: ~defaultConfiguration /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/application.js:70:57
+      1  100.0%      LazyCompile: ~init /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/application.js:57:25
+      1  100.0%        LazyCompile: ~createApplication /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/express.js:37:27
+      1  100.0%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    1.9%    LazyCompile: ~assertEncoding internal/fs/utils.js:143:24
+      1  100.0%      LazyCompile: ~getOptions internal/fs/utils.js:305:20
+      1  100.0%        LazyCompile: ~readFileSync fs.js:390:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.9%    LazyCompile: ~Server.listen net.js:1411:35
+      1  100.0%      LazyCompile: ~listen /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/application.js:616:29
+      1  100.0%        Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/server.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.9%    LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:92:31
+      1  100.0%            Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/send/index.js:1:1
+      1    1.9%    Eval: ~<anonymous> internal/fs/dir.js:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%    Eval: ~<anonymous> internal/bootstrap/switches/is_main_thread.js:1:1
+
+     45   22.8%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     45  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     45  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     42   93.3%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      3    7.1%          Eval: ~<anonymous> stream.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    7.1%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.8%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.8%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:427:29
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      2    4.8%          Eval: ~<anonymous> internal/child_process.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.8%          Eval: ~<anonymous> http.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.8%          Eval: ~<anonymous> fs.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.8%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.8%          Eval: ~<anonymous> buffer.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:302:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.4%          LazyCompile: ~lazyLoadStreams fs.js:2064:25
+      1  100.0%            LazyCompile: ~get ReadStream fs.js:2172:17
+      1    2.4%          LazyCompile: ~initializeSourceMapsHandlers internal/bootstrap/pre_execution.js:452:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1    2.4%          Eval: ~<anonymous> tty.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/modules/package_json_reader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/modules/esm/translators.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/fs/promises.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/crypto/pbkdf2.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/crypto/keygen.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/bootstrap/pre_execution.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/blocklist.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> internal/blob.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> crypto.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.4%          Eval: ~<anonymous> _http_client.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    6.7%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      3  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+
+     15    7.6%  T __kernelrpc_mach_port_get_refs
+      3   20.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1   33.3%      LazyCompile: ~value internal/console/constructor.js:261:20
+      1  100.0%        LazyCompile: ~log internal/console/constructor.js:362:6
+      1  100.0%          t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1  100.0%            LazyCompile: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/server.js:80:33
+      1   33.3%      Eval: ~<instance_members_initializer> internal/util/iterable_weak_map.js:29:3
+      1  100.0%        LazyCompile: ~IterableWeakMap internal/util/iterable_weak_map.js:28:1
+      1  100.0%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1   33.3%      Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/ipaddr.js/lib/ipaddr.js:56:26
+      1  100.0%        Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/ipaddr.js/lib/ipaddr.js:1:10
+      1  100.0%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/ipaddr.js/lib/ipaddr.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+
+     14    7.1%  T _mach_port_allocate
+
+     10    5.1%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     10  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     10  100.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+     10  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+     10  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+     10  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+      6    3.0%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      6  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      6  100.0%      LazyCompile: ~openSync fs.js:488:18
+      6  100.0%        LazyCompile: ~readFileSync fs.js:390:22
+      6  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      6  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+      5    2.5%  T ___getrlimit
+
+      5    2.5%  /usr/lib/system/libsystem_pthread.dylib
+      2   40.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1   50.0%      LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:92:31
+      1   50.0%      Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+
+      5    2.5%  /usr/lib/libc++.1.dylib
+      1   20.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~resolveMainPath internal/modules/run_main.js:12:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+
+      4    2.0%  T _posix_spawn_file_actions_adddup2
+
+      4    2.0%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      4  100.0%      LazyCompile: ~internalBinding internal/bootstrap/loaders.js:138:45
+      2   50.0%        Eval: ~<anonymous> crypto.js:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2  100.0%            LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1   25.0%        Eval: ~<anonymous> internal/util.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1   25.0%        Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+
+      4    2.0%  /usr/lib/system/libsystem_platform.dylib
+      1   25.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+
+      3    1.5%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      3  100.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1   33.3%      t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%        LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1   33.3%      LazyCompile: ~getStderr internal/bootstrap/switches/is_main_thread.js:132:19
+      1  100.0%        Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1   33.3%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:92:31
+      1  100.0%            Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/express/lib/application.js:1:1
+
+      3    1.5%  /usr/lib/system/libsystem_c.dylib
+      1   33.3%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+
+      2    1.0%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      2  100.0%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      2  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      2  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      2  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+
+      2    1.0%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      2  100.0%      LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1   50.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1   50.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+
+      2    1.0%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      2  100.0%      LazyCompile: ~WriteStream tty.js:85:21
+      2  100.0%        LazyCompile: ~createWritableStdioStream internal/bootstrap/switches/is_main_thread.js:41:35
+      1   50.0%          LazyCompile: ~getStdout internal/bootstrap/switches/is_main_thread.js:120:19
+      1  100.0%            LazyCompile: ~get internal/console/constructor.js:206:14
+      1   50.0%          LazyCompile: ~getStderr internal/bootstrap/switches/is_main_thread.js:132:19
+      1  100.0%            Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/debug/src/node.js:1:1
+
+      2    1.0%  /usr/lib/system/libsystem_kernel.dylib
+      1   50.0%    t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%      t __ZN2v88internalL44Builtin_Impl_V8BreakIteratorPrototypeCurrentENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1  100.0%        LazyCompile: ~populateMaps /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/mime-types/index.js:154:23
+      1  100.0%          Eval: ~<anonymous> /Users/hcondori/academia/backend/14730/camada14730/clase32/profiling/node_modules/mime-types/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+

@@ -1,0 +1,35 @@
+Started phase 0, duration: 1s @ 21:58:00(-0300) 2022-01-10
+Report @ 21:58:02(-0300) 2022-01-10
+Elapsed time: 1 second
+  Scenarios launched:  10
+  Scenarios completed: 0
+  Requests completed:  0
+  Mean response/sec: 7.19
+  Response time (msec):
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+  Errors:
+    ECONNRESET: 1
+    ECONNREFUSED: 9
+
+All virtual users finished
+Summary report @ 21:58:02(-0300) 2022-01-10
+  Scenarios launched:  10
+  Scenarios completed: 0
+  Requests completed:  0
+  Mean response/sec: 7.19
+  Response time (msec):
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+  Scenario counts:
+    0: 10 (100%)
+  Errors:
+    ECONNRESET: 1
+    ECONNREFUSED: 9
+
