@@ -1,0 +1,22 @@
+{
+  "name": "clase31",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node auto-test.js",
+    "start": "0x server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "log4js": "^6.3.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "autocannon": "^7.6.0"
+  }
+}
