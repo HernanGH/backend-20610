@@ -7,6 +7,7 @@ app.get('/message', (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
+
 const server = app.listen(PORT, () => {
   console.log(`Server express running in port: ${PORT}`);
 });
