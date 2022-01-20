@@ -1,0 +1,13 @@
+[
+  {
+    "productos": [
+      {
+        "title": "pizza",
+        "price": 100,
+        "thumbnail": "sdasdasd",
+        "id": 1
+      }
+    ],
+    "id": 1
+  }
+]
