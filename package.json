@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "start": "nodemon src/main.js",
+    "start": "node src/main.js",
     "test": "mocha src/test/*.test.js"
   },
   "keywords": [],
