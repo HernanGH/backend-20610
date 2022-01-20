@@ -1,5 +1,9 @@
 import env from './env.js'
-import app from './server.js'
+// import app from './server.js'
+import express from 'express'
+const app = express()
+
+app.get('/', (req, res) => res.send('hello world'));
 
 const PORT = process.env.PORT || 8080
 
