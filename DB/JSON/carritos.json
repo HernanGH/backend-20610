@@ -6,8 +6,31 @@
         "price": 100,
         "thumbnail": "sdasdasd",
         "id": 1
+      },
+      {
+        "title": "pizza",
+        "price": 100,
+        "thumbnail": "sdasdasd",
+        "id": 1
+      },
+      {
+        "title": "pizza",
+        "price": 100,
+        "thumbnail": "sdasdasd",
+        "id": 1
       }
     ],
     "id": 1
+  },
+  {
+    "productos": [
+      {
+        "title": "pizza",
+        "price": 100,
+        "thumbnail": "sdasdasd",
+        "id": 1
+      }
+    ],
+    "id": 2
   }
 ]
