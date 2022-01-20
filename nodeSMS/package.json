@@ -1,6 +1,6 @@
 {
-  "name": "backend-20610",
-  "version": "1.1.0",
+  "name": "nodeWapp",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "twilio": "^3.49.0"
   }
 }
