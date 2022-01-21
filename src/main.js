@@ -1,9 +1,5 @@
-// import env from './env.js'
-// import app from './server.js'
-import express from 'express'
-const app = express()
-
-app.get('/', (req, res) => res.send('hello world'));
+import env from './env.js'
+import app from './server.js'
 
 app.get('/test', (req, res) => res.send('[test] - hello world'));
 
