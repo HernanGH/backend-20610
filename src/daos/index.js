@@ -2,6 +2,7 @@ import config from '../config.js'
 
 let productosDao
 let carritosDao
+let usuariosDao
 
 switch (config.PERS) {
     case 'json':
@@ -21,9 +22,11 @@ switch (config.PERS) {
     case 'mongodb':
         const { default: ProductosDaoMongoDb } = await import('./productos/ProductosDaoMongoDb.js')
         const { default: CarritosDaoMongoDb } = await import('./carritos/CarritosDaoMongoDb.js')
+        const { default: UsuariosDaoMongoDb } = await import('./usuarios/UsuariosDaoMongoDb.js')
 
         productosDao = new ProductosDaoMongoDb()
         carritosDao = new CarritosDaoMongoDb()
+        usuariosDao = new UsuariosDaoMongoDb()
         break
     case 'mariadb':
         const { default: ProductosDaoMariaDb } = await import('./productos/ProductosDaoMariaDb.js')
@@ -48,4 +51,4 @@ switch (config.PERS) {
         break
 }
 
-export { productosDao, carritosDao }
+export { productosDao, carritosDao, usuariosDao }
