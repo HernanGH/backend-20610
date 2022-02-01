@@ -20,7 +20,7 @@ const div = (req,res) => {
     res.send(`La div de ${a} y ${b} es ${operaciones.dividir(Number(a),Number(b))}`)
 }
 
-const listar = (req,res) => res.json(operaciones.listar())
+const listar = async (req,res) => res.json(await operaciones.listar())
 
 module.exports = {
     suma,
