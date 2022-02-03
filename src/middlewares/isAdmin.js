@@ -2,6 +2,7 @@ const ADMIN = true;
 
 const isAdmin = (req, res, next) => {
   if (ADMIN) {
+    req.isAdmin = ADMIN;
     next();
   } else { 
     res
