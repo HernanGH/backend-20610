@@ -9,7 +9,7 @@ app.use( express.urlencoded( { extended: true }) );
 
 app.get('/', (req,res) => res.send({ data: Date.now() }))
 
-app.use(router);
+app.use('/api', router);
 
 app.listen(8080, () => 
   console.log(`Servidor abierto en http://localhost:${8080}/`)
