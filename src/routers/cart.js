@@ -3,10 +3,10 @@ const { createCart, deleteCart, addProductsToCart, getProductsByIdCard } = requi
 
 const cartRouter = express.Router();
 
-// cartRouter.get('/', async (req, res) => {
-//   const data = await getAllCart();
-//   res.send({ data });
-// });
+cartRouter.get('/', async (req, res) => {
+  // const data = await getAllCart();
+  res.send({});
+});
 
 cartRouter.post('/', async (req, res) => {
   const cart = req.body;
