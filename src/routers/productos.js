@@ -1,6 +1,7 @@
 import express from 'express'
-import { productosDao as productosApi, } from '../daos/index.js'
+import PersistenceFactory from '../daos/index.js'
 import soloAdmins from '../middlewares/index.js'
+import getPersistence from '../utils/getPersistence.js'
 
 const { Router } = express
 
@@ -8,8 +9,13 @@ const { Router } = express
 // configuro router de productos
 const productosRouter = new Router()
 
+const { productosDao: productosApi } = await PersistenceFactory.getPersistenceMethod(getPersistence())
+
+// const cotizaciondeHoy = 213;
+
 productosRouter.get('/', async (req, res) => {
     const productos = await productosApi.listarAll()
+    // const productosList = new ProductDto(productos, cotizaciondeHoy)
     res.json(productos)
 })
 
