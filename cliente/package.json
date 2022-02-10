@@ -21,7 +21,7 @@
     "copy": "xcopy /E /I /Y build ..\\server\\public",
     "delArchivos": "del /S /Q /F ..\\server\\public\\*.*",
     "delCarpetas": "rd /S /Q ..\\server\\public\\",
-    "buildCopy": "npm run build && npm run delArchivos && npm run delCarpetas && npm run copy",    
+    "buildCopy": "npm run build && npm run delArchivos && npm run delCarpetas && npm run copy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
