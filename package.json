@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha mocha/demo.test.js"
+    "test": "mocha test/*.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,8 @@
     "got": "^12.0.1"
   },
   "devDependencies": {
-    "mocha": "^9.2.0"
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0",
+    "supertest": "^6.2.2"
   }
 }
